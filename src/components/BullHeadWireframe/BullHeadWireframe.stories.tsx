@@ -1,0 +1,37 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+
+import { BullHeadWireframe } from './BullHeadWireframe';
+
+const meta = {
+  title: 'Components/BullHeadWireframe',
+  component: BullHeadWireframe,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  args: {
+    title: 'Wireframe bull head',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ width: 'min(760px, 86vw)' }}>
+        <Story />
+      </div>
+    ),
+  ],
+} satisfies Meta<typeof BullHeadWireframe>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const Compact: Story = {
+  decorators: [
+    (Story) => (
+      <div style={{ width: 320 }}>
+        <Story />
+      </div>
+    ),
+  ],
+};
