@@ -1,11 +1,10 @@
 import { Button as AriaButton } from 'react-aria-components';
 
+import { Typography } from '../Typography/Typography';
 import './button.css';
 
 export interface ButtonProps {
     primary?: boolean;
-    backgroundColor?: string;
-    size?: 'small' | 'medium' | 'large';
     label: string;
     onPress?: () => void;
     disabled?: boolean;
@@ -13,22 +12,21 @@ export interface ButtonProps {
 
 export const Button = ({
     primary = false,
-    size = 'medium',
-    backgroundColor,
     label,
     onPress,
     disabled = false,
 }: ButtonProps) => {
-    const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+    const mode = primary ? 'button--primary' : 'button--secondary';
 
     return (
         <AriaButton
-            className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-            style={{ backgroundColor }}
+            className={['button', mode].join(' ')}
             onPress={onPress}
             isDisabled={disabled}
         >
-            {label}
+            <Typography as="span" variant="body">
+                {label}
+            </Typography>
         </AriaButton>
     );
 };
