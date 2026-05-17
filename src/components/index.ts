@@ -2,9 +2,12 @@
 export { Button } from './Button/Button';
 export type { ButtonProps } from './Button/Button';
 
+<<<<<<< HEAD
 export { BullHeadWireframe } from './BullHeadWireframe/BullHeadWireframe';
 export type { BullHeadWireframeProps } from './BullHeadWireframe/BullHeadWireframe';
 
+=======
+>>>>>>> origin/main
 export { Link } from './Link/Link';
 export type { LinkProps } from './Link/Link';
 
