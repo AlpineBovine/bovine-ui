@@ -30,6 +30,8 @@ export function BullHeadWireframe({
 
       <g className="bull-head-wireframe__grid" aria-hidden="true">
         <path d="M230 214 L300 150 L420 150 L490 214 L468 372 L410 462 L310 462 L252 372 Z" />
+        <path d="M300 150 L360 250 L420 150" />
+        <path d="M230 214 L258 272 L360 250 L462 272 L490 214" />
         <path d="M300 150 L204 126 L112 110 L42 92" />
         <path d="M300 150 L218 174 L162 198 L230 214" />
         <path d="M42 92 L78 78 L112 110 L78 120 Z" />
@@ -44,6 +46,7 @@ export function BullHeadWireframe({
         <path d="M204 126 L218 174" />
         <path d="M230 214 L150 254 L242 300 Z" />
         <path d="M230 214 L242 300" />
+        <path d="M150 254 L230 214 L202 278" />
         <path d="M150 254 L202 278 L242 300" />
         <path d="M202 278 L230 214" />
         <path d="M420 150 L516 126 L608 110 L678 92" />
@@ -60,14 +63,20 @@ export function BullHeadWireframe({
         <path d="M516 126 L502 174" />
         <path d="M490 214 L570 254 L478 300 Z" />
         <path d="M490 214 L478 300" />
+        <path d="M570 254 L490 214 L518 278" />
         <path d="M570 254 L518 278 L478 300" />
         <path d="M518 278 L490 214" />
         <path d="M300 150 L258 272 L310 462" />
         <path d="M420 150 L462 272 L410 462" />
         <path d="M230 214 L360 250 L490 214" />
+        <path d="M258 272 L360 318 L462 272" />
         <path d="M252 372 L360 318 L468 372" />
         <path d="M300 150 L360 318 L420 150" />
+        <path d="M258 272 L252 372" />
+        <path d="M462 272 L468 372" />
         <path d="M278 356 L360 406 L442 356" />
+        <path d="M252 372 L310 462 L360 406 L410 462 L468 372" />
+        <path d="M310 462 L360 406 L360 430 L410 462" />
         <path d="M310 462 L360 430 L410 462" />
       </g>
 
