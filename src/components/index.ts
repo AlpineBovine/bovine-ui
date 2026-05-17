@@ -4,6 +4,8 @@ export type { ButtonProps } from './Button/Button';
 
 export { BullHeadWireframe } from './BullHeadWireframe/BullHeadWireframe';
 export type { BullHeadWireframeProps } from './BullHeadWireframe/BullHeadWireframe';
+export { BullHeadFilled } from './BullHeadWireframe/BullHeadFilled';
+export type { BullHeadFilledProps } from './BullHeadWireframe/BullHeadFilled';
 
 export { Link } from './Link/Link';
 export type { LinkProps } from './Link/Link';
