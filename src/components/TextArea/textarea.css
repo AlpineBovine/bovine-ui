@@ -1,0 +1,32 @@
+.textarea {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.textarea-label {
+    display: block;
+}
+
+.textarea-input {
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-medium);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.textarea-input:focus {
+    outline: none;
+    border-color: var(--color-button-primary);
+    box-shadow: 0 0 0 2px rgba(85, 90, 185, 0.1);
+}
+
+.textarea-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

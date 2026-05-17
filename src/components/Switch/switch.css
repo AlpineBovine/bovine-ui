@@ -1,0 +1,59 @@
+.switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.switch-track {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.switch-track--on {
+    background-color: var(--color-button-primary);
+}
+
+.switch-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 2px;
+    transition: left 0.2s ease;
+}
+
+.switch-track--on .switch-thumb {
+    left: calc(100% - 22px);
+}
+
+.switch-label {
+    user-select: none;
+}
+
+.switch:focus {
+    outline: none;
+}
+
+.switch:focus-visible .switch-track {
+    outline: 2px solid var(--color-button-primary);
+    outline-offset: 2px;
+}
+
+.switch:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
