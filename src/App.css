@@ -44,7 +44,6 @@
 .app-title {
   font-size: 34px;
 }
-<<<<<<< HEAD
 
 .app-description {
   max-width: 62ch;
@@ -87,36 +86,6 @@
 
 .app-bull-head {
   width: min(100%, 520px);
-=======
-
-.app-description {
-  max-width: 62ch;
-}
-
-.app-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.app-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
-  gap: 24px;
-}
-
-.app-panel {
-  padding: 24px;
-  text-align: left;
-}
-
-.app-panel--form,
-.app-panel--summary {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
->>>>>>> origin/main
 }
 
 .app-panel-header {
