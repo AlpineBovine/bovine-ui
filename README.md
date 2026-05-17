@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="design-system/src/assets/bull-head-wireframe.png" alt="Bovine UI wireframe bull head" width="420" />
+  <img src="design-system/src/assets/bull-head-wireframe.svg" alt="Bovine UI wireframe bull head" width="420" />
 </p>
 
 # Bovine UI
@@ -110,4 +110,4 @@ The bull head mark lives at:
 - `design-system/src/assets/bull-head-wireframe.svg`
 - `design-system/src/assets/bull-head-wireframe.png`
 
-The `BullHeadWireframe` component renders the SVG asset directly, while the PNG is used at the top of this README for GitHub preview.
+The `BullHeadWireframe` component renders the SVG asset directly, which is also used at the top of this README for GitHub preview.
