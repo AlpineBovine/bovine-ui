@@ -68,10 +68,24 @@
 }
 
 .app-panel--form,
-.app-panel--summary {
+.app-panel--summary,
+.app-panel--brand {
   display: flex;
   flex-direction: column;
   gap: 22px;
+}
+
+.app-panel--brand {
+  grid-column: 1 / -1;
+  align-items: center;
+}
+
+.app-panel--brand .app-panel-header {
+  width: 100%;
+}
+
+.app-bull-head {
+  width: min(100%, 520px);
 }
 
 .app-panel-header {

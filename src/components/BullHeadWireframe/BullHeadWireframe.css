@@ -1,0 +1,6 @@
+.bull-head-wireframe {
+  width: min(100%, 760px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 24px 44px var(--bull-head-wireframe-shadow, rgba(21, 18, 26, 0.16)));
+}

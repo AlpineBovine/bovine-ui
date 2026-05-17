@@ -1,45 +1,112 @@
-﻿# Bovine UI
+<p align="center">
+  <img src="src/assets/bull-head-wireframe.png" alt="Bovine UI wireframe bull head" width="420" />
+</p>
 
-A minimal React design system starter built with Vite, React Aria, Storybook, and Jest.
+# Bovine UI
 
-## Project structure
+Bovine UI is a small React design system playground built with Vite, TypeScript, React Aria Components, Storybook, and Jest. It is set up as a place to build accessible component primitives, preview them in an app shell, document them in Storybook, and protect changes with lint and build checks before pushing.
 
-- `src/components/Button/`
-  - `Button.tsx` — React Aria button component
-  - `button.css` — button styles
-  - `Button.stories.ts` — Storybook stories for the button
-  - `Button.test.tsx` — Jest unit tests for the button
-- `.storybook/` — Storybook configuration
-- `jest.config.cjs` — Jest configuration
-- `tsconfig.app.json` — app TypeScript configuration
-- `tsconfig.jest.json` — Jest TypeScript configuration
+## What is included
 
-## Installation
+- Accessible React components built on `react-aria-components`.
+- Storybook stories for component development and documentation.
+- Jest and Testing Library setup for unit tests.
+- A Vite demo app that renders the component gallery.
+- A wireframe bull head brand asset available as both SVG and PNG.
+- Husky pre-push checks that run lint and build before code is pushed.
+
+## Components
+
+The shared component exports live in `src/components/index.ts`.
+
+- `BullHeadWireframe` - renders the bull head SVG asset.
+- `Button` - React Aria button component.
+- `Checkbox` - accessible checkbox control.
+- `Label` - reusable form label.
+- `Link` - styled link component.
+- `Modal` - dialog/modal surface.
+- `RadioButton` and `RadioGroupComponent` - grouped radio controls.
+- `Switch` - accessible binary toggle.
+- `TextArea` - multiline text input.
+- `TextField` - single-line text input.
+- `Tooltip` - tooltip wrapper for interactive controls.
+- `Typography` - shared text variants.
+
+## Getting started
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-## Development
+Start the Vite demo app:
 
 ```bash
 npm run dev
 ```
 
-## Storybook
+Start Storybook:
 
 ```bash
 npm run storybook
 ```
 
-## Testing
+## Scripts
 
-```bash
-npm test
+- `npm run dev` - starts the local Vite dev server.
+- `npm run build` - type-checks the app and creates a production build.
+- `npm run lint` - runs ESLint across the project.
+- `npm run preview` - previews the production build locally.
+- `npm run storybook` - starts Storybook on port `6006`.
+- `npm run build-storybook` - creates a static Storybook build.
+- `npm test` - runs the Jest test suite.
+
+## Project structure
+
+```text
+src/
+  assets/
+    bull-head-wireframe.svg
+    bull-head-wireframe.png
+  components/
+    <ComponentName>/
+      <ComponentName>.tsx
+      <ComponentName>.css
+      <ComponentName>.stories.tsx
+      <ComponentName>.test.tsx
+  App.tsx
+  App.css
+  main.tsx
+  theme.css
 ```
 
-## Notes
+Additional project configuration:
 
-- Uses `react-aria-components` for accessible headless UI.
-- The button is the first design system component and includes Storybook and Jest coverage.
-- Styles are separated per component under `src/components/<ComponentName>/`.
+- `.storybook/` - Storybook configuration.
+- `.husky/pre-push` - pre-push quality gate.
+- `eslint.config.js` - ESLint flat config.
+- `jest.config.cjs` - Jest configuration.
+- `tsconfig.app.json` - app TypeScript configuration.
+- `tsconfig.jest.json` - Jest TypeScript configuration.
+- `vite.config.ts` - Vite configuration.
+
+## Quality checks
+
+Before pushing, Husky runs:
+
+```bash
+npm run lint
+npm run build
+```
+
+You can run the same checks manually at any time. Commits can still be made locally, but pushes are blocked until both commands pass.
+
+## Brand asset
+
+The bull head mark lives at:
+
+- `src/assets/bull-head-wireframe.svg`
+- `src/assets/bull-head-wireframe.png`
+
+The `BullHeadWireframe` component renders the SVG asset directly, while the PNG is used at the top of this README for GitHub preview.

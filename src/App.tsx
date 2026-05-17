@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import {
   Button,
+  BullHeadWireframe,
   Checkbox,
   Label,
   Link,
@@ -89,6 +90,17 @@ function App() {
             </Link>
             .
           </Typography>
+        </aside>
+
+        <aside className="app-panel app-panel--brand">
+          <div className="app-panel-header">
+            <Typography as="h2" variant="title">
+              Brand mark
+            </Typography>
+            <Typography variant="caption">A wireframe bull head component rendered as SVG.</Typography>
+          </div>
+
+          <BullHeadWireframe className="app-bull-head" />
         </aside>
       </section>
 
