@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/assets/bull-head-wireframe.png" alt="Bovine UI wireframe bull head" width="420" />
+  <img src="design-system/src/assets/bull-head-wireframe.png" alt="Bovine UI wireframe bull head" width="420" />
 </p>
 
 # Bovine UI
@@ -17,7 +17,7 @@ Bovine UI is a small React design system playground built with Vite, TypeScript,
 
 ## Components
 
-The shared component exports live in `src/components/index.ts`.
+The shared component exports live in `design-system/src/components/index.ts`.
 
 - `BullHeadWireframe` - renders the bull head SVG asset.
 - `Button` - React Aria button component.
@@ -65,20 +65,21 @@ npm run storybook
 ## Project structure
 
 ```text
-src/
-  assets/
-    bull-head-wireframe.svg
-    bull-head-wireframe.png
-  components/
-    <ComponentName>/
-      <ComponentName>.tsx
-      <ComponentName>.css
-      <ComponentName>.stories.tsx
-      <ComponentName>.test.tsx
-  App.tsx
-  App.css
-  main.tsx
-  theme.css
+design-system/
+  src/
+    assets/
+      bull-head-wireframe.svg
+      bull-head-wireframe.png
+    components/
+      <ComponentName>/
+        <ComponentName>.tsx
+        <ComponentName>.css
+        <ComponentName>.stories.tsx
+        <ComponentName>.test.tsx
+    App.tsx
+    App.css
+    main.tsx
+    theme.css
 ```
 
 Additional project configuration:
@@ -106,7 +107,7 @@ You can run the same checks manually at any time. Commits can still be made loca
 
 The bull head mark lives at:
 
-- `src/assets/bull-head-wireframe.svg`
-- `src/assets/bull-head-wireframe.png`
+- `design-system/src/assets/bull-head-wireframe.svg`
+- `design-system/src/assets/bull-head-wireframe.png`
 
 The `BullHeadWireframe` component renders the SVG asset directly, while the PNG is used at the top of this README for GitHub preview.
