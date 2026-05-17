@@ -17,7 +17,12 @@
 .app-panel {
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  background: color-mix(in srgb, var(--color-background), var(--color-text) 3%);
+  background: var(--color-surface);
+  box-shadow: 0 18px 44px var(--color-shadow);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .app-hero {
@@ -51,14 +56,19 @@
 
 .app-actions {
   display: flex;
+  align-items: flex-end;
   gap: 12px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
+.app-actions .select {
+  min-width: 180px;
+}
+
 .app-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
   gap: 24px;
 }
 
@@ -68,11 +78,17 @@
 }
 
 .app-panel--form,
+.app-panel--controls,
 .app-panel--summary,
+.app-panel--disclosure,
 .app-panel--brand {
   display: flex;
   flex-direction: column;
   gap: 22px;
+}
+
+.app-panel--disclosure {
+  grid-column: 1 / -1;
 }
 
 .app-panel--brand {
@@ -85,7 +101,15 @@
 }
 
 .app-bull-head {
-  width: min(100%, 520px);
+  width: min(100%, 360px);
+}
+
+.app-brand-marks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 24px;
+  align-items: center;
+  width: min(100%, 760px);
 }
 
 .app-panel-header {
@@ -101,6 +125,11 @@
 .app-toggle-list {
   display: grid;
   gap: 14px;
+}
+
+.app-panel--disclosure .tabs,
+.app-panel--disclosure .accordion {
+  width: 100%;
 }
 
 .summary-list {
@@ -149,6 +178,10 @@
   }
 
   .summary-list {
+    grid-template-columns: 1fr;
+  }
+
+  .app-brand-marks {
     grid-template-columns: 1fr;
   }
 }

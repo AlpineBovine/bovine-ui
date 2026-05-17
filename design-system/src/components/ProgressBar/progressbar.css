@@ -1,0 +1,30 @@
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    width: 280px;
+}
+
+.progress-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+}
+
+.progress-bar-value {
+    opacity: 0.72;
+}
+
+.progress-bar-track {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: var(--color-button-primary);
+}

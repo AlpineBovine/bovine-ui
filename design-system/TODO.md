@@ -3,27 +3,27 @@
 This checklist lists React Aria components to implement in the Bovine UI design system. The order reflects implementation priority, based on how easy the component is to build and how commonly it is used.
 
 ## High Priority / Easy + Common
-- [ ] Button
-- [ ] Link
-- [ ] TextField / Input
-- [ ] TextArea
-- [ ] Checkbox
-- [ ] RadioButton
-- [ ] Switch / Toggle
-- [ ] Label
-- [ ] Tooltip
-- [ ] Modal / Dialog
+- [x] Button
+- [x] Link
+- [x] TextField / Input
+- [x] TextArea
+- [x] Checkbox
+- [x] RadioButton
+- [x] Switch / Toggle
+- [x] Label
+- [x] Tooltip
+- [x] Modal / Dialog
 
 ## Medium Priority / Common + Moderate Complexity
-- [ ] Menu / MenuTrigger
-- [ ] MenuItem
-- [ ] Select
-- [ ] FormField
-- [ ] Tabs
-- [ ] Accordion
-- [ ] Toast / Notification
-- [ ] ProgressBar
-- [ ] Slider
+- [x] Menu / MenuTrigger
+- [x] MenuItem
+- [x] Select
+- [x] FormField
+- [x] Tabs
+- [x] Accordion
+- [x] Toast / Notification
+- [x] ProgressBar
+- [x] Slider
 
 ## Medium-Low Priority / Moderate Complexity + Useful
 - [ ] Breadcrumbs

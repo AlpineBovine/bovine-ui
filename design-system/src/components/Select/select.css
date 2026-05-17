@@ -1,0 +1,86 @@
+.select {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    min-width: 220px;
+}
+
+.select-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text);
+    background: var(--color-background);
+    font-family: var(--font-family-sans);
+    cursor: pointer;
+}
+
+.select-button[data-hovered],
+.select-button[data-pressed] {
+    border-color: var(--color-button-primary);
+}
+
+.select-button[data-focus-visible] {
+    outline: 2px solid var(--color-button-primary);
+    outline-offset: 2px;
+}
+
+.select-button[data-disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.select-value {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.select-icon {
+    font-size: var(--font-size-small);
+}
+
+.select-popover {
+    min-width: var(--trigger-width);
+    padding: 4px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-background);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.select-listbox {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-height: 260px;
+    overflow: auto;
+    outline: none;
+}
+
+.select-item {
+    padding: 8px 10px;
+    border-radius: 6px;
+    outline: none;
+    cursor: default;
+}
+
+.select-item[data-focused],
+.select-item[data-hovered] {
+    background: var(--color-button-secondary);
+}
+
+.select-item[data-selected] {
+    background: var(--color-button-primary);
+    color: var(--color-button-primary-text);
+}
+
+.select-item[data-disabled] {
+    opacity: 0.45;
+}
