@@ -1,34 +1,6 @@
 .bull-head-wireframe {
   width: min(100%, 760px);
   height: auto;
-  color: #ffffff;
+  display: block;
   filter: drop-shadow(0 24px 44px var(--bull-head-wireframe-shadow, rgba(21, 18, 26, 0.16)));
-}
-
-.bull-head-wireframe path,
-.bull-head-wireframe circle {
-  vector-effect: non-scaling-stroke;
-}
-
-.bull-head-wireframe__grid path,
-.bull-head-wireframe__outline path,
-.bull-head-wireframe__features path {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.bull-head-wireframe__grid path {
-  stroke: currentColor;
-  stroke-width: 1.5;
-}
-
-.bull-head-wireframe__outline path {
-  stroke: currentColor;
-  stroke-width: 1.5;
-}
-
-.bull-head-wireframe__features path {
-  stroke: currentColor;
-  stroke-width: 1.5;
 }
