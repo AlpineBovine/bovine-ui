@@ -1,5 +1,5 @@
 import { RadioGroup, Radio } from 'react-aria-components';
-import type { RadioGroupProps, RadioProps } from 'react-aria-components';
+import type { RadioGroupProps as AriaRadioGroupProps, RadioProps } from 'react-aria-components';
 
 import { Typography } from '../Typography/Typography';
 import './radiobutton.css';
@@ -27,7 +27,7 @@ export const RadioButton = ({ label, value, ...props }: RadioButtonProps) => {
     );
 };
 
-export interface RadioGroupProps extends RadioGroupProps {
+export interface RadioGroupProps extends AriaRadioGroupProps {
     label?: string;
     options?: Array<{ value: string; label: string }>;
 }

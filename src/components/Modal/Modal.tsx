@@ -1,11 +1,11 @@
-import { Dialog, Modal as AriaModal, ModalOverlay, Heading, Button as AriaButton } from 'react-aria-components';
-import type { ModalProps as AriaModalProps } from 'react-aria-components';
+import { Dialog, Modal as AriaModal, ModalOverlay, Heading } from 'react-aria-components';
+import type { ModalOverlayProps as AriaModalOverlayProps } from 'react-aria-components';
 
 import { Typography } from '../Typography/Typography';
 import { Button } from '../Button/Button';
 import './modal.css';
 
-export interface ModalProps extends Omit<AriaModalProps, 'children'> {
+export interface ModalProps extends Omit<AriaModalOverlayProps, 'children'> {
     title?: string;
     children: React.ReactNode;
     onClose?: () => void;
