@@ -1,0 +1,19 @@
+.link {
+    color: var(--color-button-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.link:hover {
+    opacity: 0.8;
+}
+
+.link:focus {
+    outline: 2px solid var(--color-button-primary);
+    outline-offset: 2px;
+}
+
+.link:active {
+    opacity: 0.6;
+}
