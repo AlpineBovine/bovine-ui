@@ -17,34 +17,28 @@ import {
 import './App.css';
 
 function App() {
-  const [formName, setFormName] = useState('Bessie');
-  const [notes, setNotes] = useState('Prefers calm mornings and fresh pasture.');
-  const [isFeatured, setIsFeatured] = useState(true);
-  const [acceptsUpdates, setAcceptsUpdates] = useState(true);
-  const [herdRole, setHerdRole] = useState('grazer');
-  const [saveCount, setSaveCount] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
   return (
     <main id="center" className="app-shell">
       <section className="app-hero" aria-label="Bovine UI component gallery">
         <div className="app-heading">
           <Typography as="p" variant="caption" className="app-kicker">
-            Bovine UI library
+            Bovine UI
           </Typography>
           <Typography as="h1" variant="title" className="app-title">
             Component gallery
           </Typography>
           <Typography variant="body" className="app-description">
-            A single screen using every exported component in the library, wired together as a small profile editor.
+            A compact preview of the shared components exported by the library.
           </Typography>
         </div>
 
         <div className="app-actions">
-          <Tooltip content="The primary Button increments the saved counter." placement="bottom">
-            <Button primary label="Save profile" onPress={() => setSaveCount((value) => value + 1)} />
+          <Tooltip content="Tooltips wrap interactive controls." placement="bottom">
+            <Button primary label="Primary action" onPress={() => setIsPreviewOpen(true)} />
           </Tooltip>
-          <Button label="Preview modal" onPress={() => setIsModalOpen(true)} />
+          <Button label="Secondary action" onPress={() => setIsPreviewOpen(true)} />
         </div>
       </section>
 
@@ -52,77 +46,44 @@ function App() {
         <div className="app-panel app-panel--form">
           <div className="app-panel-header">
             <Typography as="h2" variant="title">
-              Form controls
+              Inputs
             </Typography>
-            <Typography variant="caption">TextField, TextArea, Label, Checkbox, Switch, and RadioButton.</Typography>
+            <Typography variant="caption">Text entry, selection, and toggle controls.</Typography>
           </div>
 
           <div className="app-field-group">
-            <Label required>Profile name</Label>
-            <TextField
-              aria-label="Profile name"
-              value={formName}
-              onChange={setFormName}
-              placeholder="Enter a profile name"
-            />
+            <Label required>Name</Label>
+            <TextField aria-label="Name" placeholder="Bessie" />
           </div>
 
-          <TextArea
-            label="Care notes"
-            value={notes}
-            onChange={setNotes}
-            placeholder="Add notes for the profile"
-            rows={5}
-          />
+          <TextArea label="Notes" placeholder="Add care notes" rows={5} />
 
           <div className="app-toggle-list">
-            <Checkbox isSelected={acceptsUpdates} onChange={setAcceptsUpdates} label="Receive pasture updates" />
-            <Switch isSelected={isFeatured} onChange={setIsFeatured} label="Feature this profile" />
+            <Checkbox defaultSelected label="Checkbox option" />
+            <Switch defaultSelected label="Switch option" />
           </div>
 
-          <RadioGroupComponent
-            label="Herd role"
-            value={herdRole}
-            onChange={setHerdRole}
-            aria-label="Herd role"
-          >
-            <RadioButton value="grazer" label="Grazer" />
-            <RadioButton value="leader" label="Trail leader" />
-            <RadioButton value="observer" label="Fence observer" />
+          <RadioGroupComponent label="Radio group" defaultValue="pasture" aria-label="Radio group">
+            <RadioButton value="pasture" label="Pasture" />
+            <RadioButton value="barn" label="Barn" />
+            <RadioButton value="yard" label="Yard" />
           </RadioGroupComponent>
         </div>
 
         <aside className="app-panel app-panel--summary">
           <div className="app-panel-header">
             <Typography as="h2" variant="title">
-              Live summary
+              Text and links
             </Typography>
-            <Typography variant="caption">Typography and Link keep supporting text consistent.</Typography>
+            <Typography variant="caption">Typography variants and the shared Link component.</Typography>
           </div>
 
-          <dl className="summary-list">
-            <div>
-              <dt>Name</dt>
-              <dd>{formName || 'Unnamed profile'}</dd>
-            </div>
-            <div>
-              <dt>Role</dt>
-              <dd>{herdRole}</dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>{isFeatured ? 'Featured' : 'Standard'}</dd>
-            </div>
-            <div>
-              <dt>Updates</dt>
-              <dd>{acceptsUpdates ? 'Enabled' : 'Paused'}</dd>
-            </div>
-          </dl>
-
-          <Typography variant="body">{notes}</Typography>
+          <Typography variant="body">
+            Body text uses the same theme tokens as controls, so examples stay aligned with the design system.
+          </Typography>
 
           <Typography variant="caption">
-            Saved {saveCount} {saveCount === 1 ? 'time' : 'times'}. View the{' '}
+            Read more in the{' '}
             <Link href="https://react-spectrum.adobe.com/react-aria/components.html" target="_blank">
               React Aria docs
             </Link>
@@ -131,15 +92,8 @@ function App() {
         </aside>
       </section>
 
-      <Modal
-        title="Profile preview"
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        closeButtonLabel="Done"
-      >
-        <Typography variant="body">
-          {formName || 'Unnamed profile'} is marked as {isFeatured ? 'featured' : 'standard'} with the {herdRole} role.
-        </Typography>
+      <Modal title="Modal" isOpen={isPreviewOpen} onClose={() => setIsPreviewOpen(false)} closeButtonLabel="Close">
+        <Typography variant="body">This modal is rendered with the library Modal and Button components.</Typography>
       </Modal>
     </main>
   );
